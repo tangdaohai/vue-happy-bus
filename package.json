@@ -1,0 +1,47 @@
+{
+  "name": "vue-happy-bus",
+  "version": "0.1.0",
+  "description": "Event Bus for Vue.",
+  "main": "./dist/happy-bus.js",
+  "scripts": {
+    "build": "./node_modules/.bin/rollup --config",
+    "min": "./node_modules/.bin/uglifyjs dist/happy-bus.js -c -m --comments /^!/ -o dist/happy-bus.min.js --source-map url",
+    "release": "npm run build && npm run min"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tangdaohai/vue-happy-bus.git"
+  },
+  "keywords": [
+    "Vue",
+    "Bus",
+    "event"
+  ],
+  "author": "tangdaohai@outlook.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tangdaohai/vue-happy-bus/issues"
+  },
+  "homepage": "https://github.com/tangdaohai/vue-happy-bus",
+  "dependencies": {
+    "vue": "^2.4.4"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.1",
+    "babel-preset-latest": "^6.24.1",
+    "eslint": "^4.7.2",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.2.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "rollup": "^0.49.3",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-eslint": "^4.0.0",
+    "rollup-plugin-json": "^2.3.0",
+    "rollup-plugin-replace": "^2.0.0",
+    "uglify-js": "^3.1.2"
+  }
+}
