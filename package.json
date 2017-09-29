@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/tangdaohai/vue-happy-bus",
   "dependencies": {
-    "vue": "^2.4.4"
+    "vue": "^2.0.0"
   },
   "devDependencies": {
     "babel": "^6.23.0",
