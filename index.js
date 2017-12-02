@@ -7,11 +7,14 @@ const Bus = new Vue()
 // 移除所有事件的方法
 const destroyHandler = function () {
   // this 为调用此方法的vue组件
-  const currentEventMap = EventStore[this._uid]
-  for (let type in currentEventMap) {
+  const currentEventObj = EventStore[this._uid]
+  if (typeof currentEventObj === 'undefined') {
+    return
+  }
+  for (let type in currentEventObj) {
     const key = Array.isArray(type) ? type.join(',') : type
     // Bus 解绑事件
-    Bus.$off(type, currentEventMap[key])
+    Bus.$off(type, currentEventObj[key])
   }
   // 删除记录的事件集合
   delete EventStore[this._uid]
