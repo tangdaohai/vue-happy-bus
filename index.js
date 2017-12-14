@@ -1,4 +1,8 @@
-import Vue from 'vue'
+import Vue$ from 'vue'
+let Vue = Vue$
+if (typeof window !== 'undefined' && window.Vue) {
+  Vue = window.Vue
+}
 
 // 记录所有的事件类型与事件函数
 const EventStore = {}

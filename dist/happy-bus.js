@@ -7,12 +7,17 @@
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('vue')) :
 	typeof define === 'function' && define.amd ? define(['exports', 'vue'], factory) :
-	(factory((global['happy-bus'] = {}),global.Vue));
-}(this, (function (exports,Vue) { 'use strict';
+	(factory((global['happy-bus'] = {}),global.Vue$));
+}(this, (function (exports,Vue$) { 'use strict';
 
-Vue = Vue && Vue.hasOwnProperty('default') ? Vue['default'] : Vue;
+Vue$ = Vue$ && Vue$.hasOwnProperty('default') ? Vue$['default'] : Vue$;
 
 var version = "0.1.0";
+
+var Vue = Vue$;
+if (typeof window !== 'undefined' && window.Vue) {
+  Vue = window.Vue;
+}
 
 // 记录所有的事件类型与事件函数
 var EventStore = {};
@@ -21,11 +26,14 @@ var Bus = new Vue();
 // 移除所有事件的方法
 var destroyHandler = function destroyHandler() {
   // this 为调用此方法的vue组件
-  var currentEventMap = EventStore[this._uid];
-  for (var type in currentEventMap) {
+  var currentEventObj = EventStore[this._uid];
+  if (typeof currentEventObj === 'undefined') {
+    return;
+  }
+  for (var type in currentEventObj) {
     var key = Array.isArray(type) ? type.join(',') : type;
     // Bus 解绑事件
-    Bus.$off(type, currentEventMap[key]);
+    Bus.$off(type, currentEventObj[key]);
   }
   // 删除记录的事件集合
   delete EventStore[this._uid];
