@@ -1,6 +1,14 @@
 vue-happy-bus
 ===
 
+
+<a href="https://www.npmjs.com/package/vue-happy-bus"><img src="https://img.shields.io/npm/dm/vue-happy-bus.svg" alt="Downloads"></a>
+<a href="https://www.npmjs.com/package/vue-happy-bus"><img src="https://img.shields.io/npm/v/vue-happy-bus.svg" alt="Version"></a>
+<a href="https://www.npmjs.com/package/vue-happy-bus"><img src="https://img.shields.io/github/issues-raw/tangdaohai/vue-happy-bus.svg" alt="open issues"></a>
+<a href="https://www.npmjs.com/package/vue-happy-bus"><img src="https://img.shields.io/github/issues-closed-raw/tangdaohai/vue-happy-bus.svg" alt="closed issues"></a>
+<a href="https://www.npmjs.com/package/vue-happy-bus"><img src="https://img.shields.io/npm/l/vue-happy-bus.svg" alt="License"></a>
+![欢迎PR](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+
 ## vue-happy-bus 是干嘛的
 
 `vue-happy-bus`是一款基于vue实现的`订阅/发布`插件。
