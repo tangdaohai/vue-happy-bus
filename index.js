@@ -1,4 +1,5 @@
 import Vue$ from 'vue'
+import { version } from './package.json'
 let Vue = Vue$
 if (typeof window !== 'undefined' && window.Vue) {
   Vue = window.Vue
@@ -62,4 +63,4 @@ BusFactory.$emit = (...params) => Bus.$emit(...params)
 BusFactory.$once = (...params) => Bus.$once(...params)
 
 export default BusFactory
-export { version } from './package.json'
+export { Bus, version }

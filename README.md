@@ -9,7 +9,7 @@ vue-happy-bus
 <a href="https://www.npmjs.com/package/vue-happy-bus"><img src="https://img.shields.io/npm/l/vue-happy-bus.svg" alt="License"></a>
 ![欢迎PR](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
-## vue-happy-bus 是干嘛的
+### vue-happy-bus 是干嘛的
 
 `vue-happy-bus`是一款基于vue实现的`订阅/发布`插件。
 
@@ -29,7 +29,7 @@ vue-happy-bus
 
 **总得来说他是能让你`偷懒`少写代码的工具。**
 
-## 安装
+### 安装
 
 1. npm
   推荐使用`npm`，这样可以跟随你的`webpack`配置去选择怎样打包。
@@ -46,7 +46,9 @@ vue-happy-bus
     </html>
   ```
 
-## 如何使用
+### 如何使用
+
+自动注销监听事件的方式：
 
 ```js
 import BusFactory from 'vue-happy-bus'
@@ -71,7 +73,31 @@ export default {
 }
 ```
 
-## 属性
+或者你也可以只引入 `new Vue()` 后的 `Bus`。
+它不会像 BusFactory 那样自动注销 `$on` 的事件。
+
+> 因为当你在某些插件中想要使用 `bus` 的时候，这些插件并不是 vue 组件，所以没有 this, 也没有 destroyed 函数。
+
+```js
+import { Bus } from 'vue-happy-bus'
+
+// ...
+Bus.$on('type', 'handler')
+
+// 在适当的时候，需要手动注销
+Bus.$off('type', 'handler')
+
+```
+
+如果你只需要 `$emit` 也可以只引用 `Bus`
+
+```js
+import { Bus } from 'vue-happy-bus'
+
+Bus.$emit('type') // Bus.$emit 也会通知到通过 BusFactory.$on 的函数
+```
+
+### 属性
 
 bus 只包含4个方法：
 
@@ -82,12 +108,12 @@ bus 只包含4个方法：
 
 它们是基于`new Vue()`后衍生出来的，与`Vue`的使用方式一模一样。
 
-## PR
+### PR
 期待并欢迎您的PR。
 但请您一定要遵守[standard](https://github.com/standard/standard)代码风格规范。
 并且您只需要提交`src`目录下的源码即可，`无需`提交`build`之后的代码
 
-## License
+### License
 
 [MIT](http://opensource.org/licenses/MIT)
 
