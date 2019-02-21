@@ -1,6 +1,6 @@
 /*!
   name: vue-happy-bus
-  version: 0.1.0
+  version: 1.0.1
   author: tangdaohai@outlook.com
   github: https://github.com/tangdaohai/vue-happy-bus
   */
@@ -12,7 +12,7 @@
 
 Vue$ = Vue$ && Vue$.hasOwnProperty('default') ? Vue$['default'] : Vue$;
 
-var version = "0.1.0";
+var version = "1.0.1";
 
 var Vue = Vue$;
 if (typeof window !== 'undefined' && window.Vue) {
@@ -85,6 +85,7 @@ BusFactory.$once = function () {
 };
 
 exports['default'] = BusFactory;
+exports.Bus = Bus;
 exports.version = version;
 
 Object.defineProperty(exports, '__esModule', { value: true });
