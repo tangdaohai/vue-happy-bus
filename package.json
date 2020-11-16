@@ -2,11 +2,16 @@
   "name": "vue-happy-bus",
   "version": "vue3-1.0.0",
   "description": "Event Bus for Vue.",
-  "main": "./dist/happy-bus.js",
+  "source": "src/index.ts",
+  "amdName": "VueHappyBus",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "esmodule": "dist/index.modern.js",
+  "unpkg": "dist/index.umd.js",
+  "types": "dist/types",
   "scripts": {
-    "build": "./node_modules/.bin/rollup --config",
-    "min": "./node_modules/.bin/uglifyjs dist/happy-bus.js -c -m --comments /^!/ -o dist/happy-bus.min.js --source-map url",
-    "release": "npm run build && npm run min"
+    "test": "jest --coverage",
+    "build": "microbundle --strict --no-compress --external vue"
   },
   "repository": {
     "type": "git",
