@@ -1,7 +1,7 @@
 {
   "name": "vue-happy-bus",
   "version": "vue3-1.0.0",
-  "description": "Event Bus for Vue.",
+  "description": "Event Bus for Vue3, automatically cancel listening events when unmounted.",
   "source": "src/index.ts",
   "amdName": "VueHappyBus",
   "main": "dist/index.js",
@@ -13,14 +13,20 @@
     "test": "jest --coverage",
     "build": "microbundle --strict --external vue"
   },
+  "files": [
+    "src",
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tangdaohai/vue-happy-bus.git"
   },
   "keywords": [
-    "Vue",
-    "Bus",
-    "event"
+    "vue bus",
+    "vue3 bus",
+    "bus",
+    "event-bus",
+    "event-hub"
   ],
   "author": "tangdaohai@outlook.com",
   "license": "MIT",
