@@ -13,7 +13,7 @@ vue-happy-bus
 
 ### vue-happy-bus 是干嘛的
 
-> 在 vue3 版本中删除了 `$on/$once/$off` API(https://v3.vuejs.org/guide/migration/events-api.html#_3-x-update)，不过不用担心，可以使用此仓库作为替代方案，继续使用 event bus 的方式来实现跨组件的通信功能，并且不用手动去 $off 事件回调。
+> 在 vue3 版本中删除了 `$on/$once/$off` API ([see](https://v3.vuejs.org/guide/migration/events-api.html#_3-x-update))，不过不用担心，可以使用此仓库作为替代方案，继续使用 event bus 的方式来实现跨组件的通信功能，并且不用手动去 $off 事件回调。
 
 `vue-happy-bus`是一款基于vue3实现的`订阅/发布`插件。
 
