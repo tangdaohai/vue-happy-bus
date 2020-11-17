@@ -11,7 +11,7 @@
   "types": "dist/types",
   "scripts": {
     "test": "jest --coverage",
-    "build": "microbundle --strict --no-compress --external vue"
+    "build": "microbundle --strict --external vue"
   },
   "repository": {
     "type": "git",
