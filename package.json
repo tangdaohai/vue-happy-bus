@@ -1,6 +1,6 @@
 {
   "name": "vue-happy-bus",
-  "version": "vue3-1.0.0",
+  "version": "2.0.0-vue3",
   "description": "Event Bus for Vue3, automatically cancel listening events when unmounted.",
   "source": "src/index.ts",
   "amdName": "VueHappyBus",
