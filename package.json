@@ -1,6 +1,6 @@
 {
   "name": "vue-happy-bus",
-  "version": "2.0.0-vue3",
+  "version": "2.0.1-vue3",
   "description": "Event Bus for Vue3, automatically cancel listening events when unmounted.",
   "source": "src/index.ts",
   "amdName": "VueHappyBus",
@@ -11,7 +11,7 @@
   "types": "dist/types",
   "scripts": {
     "test": "jest --coverage",
-    "build": "microbundle --strict --external vue"
+    "build": "microbundle --strict"
   },
   "files": [
     "src",
@@ -35,7 +35,6 @@
   },
   "homepage": "https://github.com/tangdaohai/vue-happy-bus",
   "dependencies": {
-    "happy-event-bus": "^1.0.0",
     "vue": "^3.0.0"
   },
   "devDependencies": {
@@ -53,6 +52,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.1.0",
+    "happy-event-bus": "^1.0.0",
     "jest": "^26.6.3",
     "microbundle": "^0.12.4",
     "ts-jest": "^26.4.4",
