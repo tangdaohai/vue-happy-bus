@@ -1,7 +1,7 @@
 {
   "name": "vue-happy-bus",
-  "version": "1.0.1",
-  "description": "Event Bus for Vue.",
+  "version": "1.0.2",
+  "description": "Event Bus for Vue2. automatically cancel listening events when destroyed.",
   "main": "./dist/happy-bus.js",
   "scripts": {
     "build": "./node_modules/.bin/rollup --config",

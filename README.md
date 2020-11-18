@@ -9,6 +9,8 @@ vue-happy-bus
 <a href="https://www.npmjs.com/package/vue-happy-bus"><img src="https://img.shields.io/npm/l/vue-happy-bus.svg" alt="License"></a>
 ![欢迎PR](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
+> 此版本只适用 vue2.x 版本。如果在 vue3 中运行请查看[vue-happy-bus@next](https://github.com/tangdaohai/vue-happy-bus)
+
 ### vue-happy-bus 是干嘛的
 
 `vue-happy-bus`是一款基于vue实现的`订阅/发布`插件。
