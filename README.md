@@ -2,7 +2,7 @@ vue-happy-bus
 ===
 [![Github Actions Test](https://github.com/tangdaohai/vue-happy-bus/workflows/Unit%20Test/badge.svg)](https://github.com/tangdaohai/vue-happy-bus/actions?query=workflow%3A%22Unit+Test%22)
 <a href="https://www.npmjs.com/package/vue-happy-bus"><img src="https://img.shields.io/npm/dm/vue-happy-bus.svg" alt="Downloads"></a>
-<a href="https://www.npmjs.com/package/vue-happy-busv/next"><img src="https://img.shields.io/npm/v/vue-happy-bus/next" alt="Version"></a>
+<a href="https://www.npmjs.com/package/vue-happy-bus/v/next"><img src="https://img.shields.io/npm/v/vue-happy-bus/next" alt="Version"></a>
 <a href="https://www.npmjs.com/package/vue-happy-bus"><img src="https://img.shields.io/npm/l/vue-happy-bus.svg" alt="License"></a>
 ![欢迎PR](https://img.shields.io/badge/PRs-welcome-brightgreen.svg) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
