@@ -1,6 +1,6 @@
 /*!
   name: vue-happy-bus
-  version: 1.0.1
+  version: 1.0.3
   author: tangdaohai@outlook.com
   github: https://github.com/tangdaohai/vue-happy-bus
   */
@@ -12,7 +12,7 @@
 
 Vue$ = Vue$ && Vue$.hasOwnProperty('default') ? Vue$['default'] : Vue$;
 
-var version = "1.0.1";
+var version = "1.0.3";
 
 var Vue = Vue$;
 if (typeof window !== 'undefined' && window.Vue) {
@@ -41,13 +41,13 @@ var destroyHandler = function destroyHandler() {
 
 var BusFactory = function BusFactory(vm) {
   // 当前调用组件的 destroyed 钩子
-  var destroyed = vm.$options.destroyed;
+  var destroyed = vm.$options.destroyed || [];
   // 当前组件的唯一标示(vue生成的自增ID)
   var uid = vm._uid;
   // 初始化当前组件的事件集合对象
   EventStore[uid] = {};
   // 为当前组件挂载destroyed钩子
-  !destroyed.includes(destroyHandler) && destroyed.push(destroyHandler);
+  !destroyed.includes(destroyHandler) && vm.$once('hook:destroyed', destroyHandler);
 
   return {
     $on: function $on(type, handler) {

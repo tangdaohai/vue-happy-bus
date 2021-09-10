@@ -1,6 +1,6 @@
 {
   "name": "vue-happy-bus",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Event Bus for Vue2. automatically cancel listening events when destroyed.",
   "main": "./dist/happy-bus.js",
   "scripts": {
