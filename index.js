@@ -27,13 +27,13 @@ const destroyHandler = function () {
 
 const BusFactory = vm => {
   // 当前调用组件的 destroyed 钩子
-  const destroyed = vm.$options.destroyed
+  const destroyed = vm.$options.destroyed || []
   // 当前组件的唯一标示(vue生成的自增ID)
   const uid = vm._uid
   // 初始化当前组件的事件集合对象
   EventStore[uid] = {}
   // 为当前组件挂载destroyed钩子
-  !destroyed.includes(destroyHandler) && destroyed.push(destroyHandler)
+  !destroyed.includes(destroyHandler) && vm.$once('hook:destroyed', destroyHandler)
 
   return {
     $on: (type, handler) => {
